@@ -1,0 +1,41 @@
+.main-card-div__tableview{
+    box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    padding: 0px 20px 0px 20px;
+}
+.header__search-box i{
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 440px;
+}
+.card-container-header__title
+{
+    font-weight: 15px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.sidebar-footer
+{
+    text-align: center;
+}
+.table-view__investor-details{
+    border-bottom: 1px solid rgba(151, 151, 151, 0.15);
+}
+.inverstor__avatar-data img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.investor__contribution-value,.investor__distribution-value,.investor__balance-value,.inverstor__details-data{
+    display: flex;
+    gap: 6px;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+}
+.inverstor__name,.investor__contribution,.investor__distribution,.investor__balance,.inverstor__details{
+    color: #929292;
+    font-family: WorkSans;
+    font-size: 14px;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+}

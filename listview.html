@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="Styles/usercard.css">
+    <link rel="stylesheet" href="Styles/listsview.css">
+    <link rel="stylesheet" href="Styles/tilesview.css">
+    <link rel="icon" href="/Users/mtxit/Documents/Major Assignment /images/mtx icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.9.4/styles/salesforce-lightning-design-system.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>list view</title>
+</head>
+
+<body>
+    <!--*******header starts -->
+    <div class="header">
+        <div class="header__logo">
+            <img src='images\MTXLogo.png' alt='mtx' />
+        </div>
+        <div class="header__details">
+            <div class="header-details__dashboard">Dashboard</div>
+            <div class="header-details__notification">
+                <img src='images\Notification Icon.svg' alt='Notification' />
+            </div>
+            <div class="header-details__user">
+                <div class="header-details-user__avatar">
+                    <img src='images\User-Profile-PNG-Clipart.png' />
+                </div>
+                <div class="header-details-user__name">Vishay</div>
+                <div class="header-details-user__toggle"><img
+                        src='images\small-triangle-down.svg' /></div>
+
+            </div>
+        </div>
+    </div>
+    <!--*************header ends -->
+    <!--include side bar and cards -->
+
+    <div class="sidebar-user-card__container">
+        <!-- ************SIDE BAR STARTS -->
+        <div class="sidebar">
+            <div class="demo-only" style="width:100%">
+                <nav class="slds-nav-vertical" aria-label="Sub page">
+                    <div class="slds-nav-vertical__section">
+                        <h2 id="entity-header" class="slds-nav-vertical__title">SUMMARY</h2>
+                        <ul aria-describedby="entity-header">
+                            <li class="slds-nav-vertical__item">
+                                <a href="#" class="slds-nav-vertical__action" aria-current="true">Account Summary</a>
+                            </li>
+                    </div>
+                    <div class="slds-nav-vertical__section">
+                        <h2 id="folder-header" class="slds-nav-vertical__title">INVESTMENTS</h2>
+                        <ul aria-describedby="folder-header">
+                            <li class="slds-nav-vertical__item">
+                                <a href="#" class="slds-nav-vertical__action">My Investments</a>
+                            </li>
+                            <li class="slds-nav-vertical__item">
+                                <a href="#" class="slds-nav-vertical__action">Investor List</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="demo-only" style="width:100%">
+                        <nav class="slds-nav-vertical" aria-label="Sub page">
+                            <div class="slds-nav-vertical__section">
+                                <h2 id="entity-header" class="slds-nav-vertical__title">DOCUMENTS</h2>
+                                <ul aria-describedby="entity-header">
+                                    <li class="slds-nav-vertical__item">
+                                        <a href="#" class="slds-nav-vertical__action" aria-current="true">My
+                                            Document</a>
+                                    </li>
+                                    <li class="slds-nav-vertical__item">
+                                        <a href="#" class="slds-nav-vertical__action" aria-current="true">Delegate
+                                            Document</a>
+                                    </li>
+                            </div>
+                            <div class="demo-only" style="width:100%">
+                                <nav class="slds-nav-vertical" aria-label="Sub page">
+                                    <div class="slds-nav-vertical__section">
+                                        <h2 id="entity-header" class="slds-nav-vertical__title">TRANSACTIONS</h2>
+                                        <ul aria-describedby="entity-header">
+                                            <li class="slds-nav-vertical__item">
+                                                <a href="#" class="slds-nav-vertical__action" aria-current="true">My
+                                                    Transactions</a>
+                                            </li>
+                                    </div>
+                                    <div class="demo-only" style="width:100%">
+                                        <nav class="slds-nav-vertical" aria-label="Sub page">
+                                            <div class="slds-nav-vertical__section">
+                                                <h2 id="entity-header" class="slds-nav-vertical__title">DELEGATE</h2>
+                                                <ul aria-describedby="entity-header">
+                                                    <li class="slds-nav-vertical__item">
+                                                        <a href="#" class="slds-nav-vertical__action"
+                                                            aria-current="true">My
+                                                            Delegate</a>
+                                                    </li>
+                                            </div>
+                                        </nav>
+                                    </div><br><br><br><br><br><br><br><br><br><br>
+                                    <div class="sidebar-footer">&#xA9;2019 MTX All Rights Reserved.</div>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ***********SIDEBAR ENDS -->
+        <!-- ************card container starts -->
+        <div class="card__container">
+            <div class="card-container__header slds-grid slds-wrap">
+                <div class="card-container-header__title slds-col slds-medium-size--2-of-12">Investor List</div>
+                <div class="header__search-box slds-col slds-medium-size--5-of-12"> 
+                    <i class="fa fa-search"></i>
+                    <input style="width:100%" type="text" placeholder="Search by Name or Email.." name="search">
+                </div>
+                <div class="header__dropdown1">
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                        <button class="slds-button slds-button_neutral">
+                            Both&nbsp;<img src='images\small-triangle-down.svg'>
+                        </button>
+                      </div>
+
+                </div>
+                <div class="header__dropdown2">
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+                        <button class="slds-button slds-button_neutral">
+                            All &nbsp;<img src='images\small-triangle-down.svg'>
+                        </button>
+                      </div>
+                </div>
+                <div class="header__views">
+                   <a href="tilesview.html" ><img src='images\tilesview.svg' alt='tiles view' /></a>&nbsp;&nbsp;&nbsp;
+                    <a href="listview.html"><img src='images\listviewicon.svg' alt='list view' /></a>
+                </div>
+                <div class="header__downloadicon">
+                      <img src='images\downloadicon.svg' />
+                </div>
+            </div>
+            <div class="main-card-div__tableview">
+                <table class="table-view__container">
+                    <tr class="table-view__header">
+                        <th class="inverstor__avatar"></th>
+                        <th class="inverstor__name">Name</th>
+                        <th class="investor__contribution">Total Contribution</th>
+                        <th class="investor__distribution">Total Distributions</th>
+                        <th class="investor__balance">Total Balance</th>
+                        <th class="inverstor__details">Details</th>
+                        
+                    </tr>
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1531858981421-7a95a9d0ab24?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk0NDc1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">DAMON</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                   
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1599839575338-31b11ae2cd16?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk1MjAx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">KATHERINE</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,983</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,983</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,983</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1601576084861-5de423553c0f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk0NTE4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">ALEX</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">543,876</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">543,876</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">543,876</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1596205521983-9c372fb3d4f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3MDc4OTE1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">RIYA</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">532,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">532,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">532,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1464863979621-258859e62245?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk0OTM3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">LANA</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">198,436</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">198,436</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">198,436</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1561515075-551b90143acb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk1Mjg4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">STEFAN</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">340,821</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">340,821</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">340,821</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1528228728175-149802236c04?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk1MTAx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">CAROLINE</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">521,843</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1542123000-53b05f943818?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NDk1MDcx&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">MIKE</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">841,249</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">841,249</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">841,249</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+                    
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1589729482945-ca6f3a235f7a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NTEzOTM3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">BONNIE</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">821,243</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+                    <tr class="table-view__investor-details">
+                        <td class="inverstor__avatar-data">
+                            <img
+                                src='https://images.unsplash.com/photo-1558203728-00f45181dd84?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3NTEzODg0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400' />
+                        </td>
+                        <td class="inverstor__name-data">JEREMY</td>
+                        <td>
+                            <div class="investor__contribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">221,663</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__distribution-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">221,663</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="investor__balance-value">
+                                <div class="currency__icon">$</div>
+                                <div class="currency__value">221,663</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="inverstor__details-data">
+                                <div class="details__icon">
+                                    <img src='images\gotoicon.png' width="15px" height="15px" alt='go icon' />
+                                </div>
+                                <div class="details__view">View</div>
+                            </div>
+                        </td>
+                        <th class="inverstor__3dots-icon">
+                            <img src='images\menu-5.png' alt='menu icon' />
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- ********card container ends -->
+    </div>
+</body>
+
+</html>
